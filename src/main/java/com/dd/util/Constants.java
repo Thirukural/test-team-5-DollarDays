@@ -9,7 +9,7 @@ public class Constants {
 //	public static String OAUTH_CLIENT_ID = "21968530703152351903";
 //	public static String OAUTH_CLIENT_SECRET = "69E1D24116D181325BA2AE57E2DFA68D";
 
-	public static String BASE_URL = "https://172.30.6.5/prweb/app/default/iP_k4zfWTgrVtgXWy1fdbjlURIkO9tIH*/!STANDARD";
+	public static String BASE_URL = "https://www.dollardays.com";
 
 	//public static String BASE_URL = "https://chrmtl-chmut-dt1.pegacloud.net/prweb";
 	public static String ACCESS_TOKEN_BASE_URL = "https://chrmtl-chmut-stg1.pegacloud.net/prweb/PRRestService";
