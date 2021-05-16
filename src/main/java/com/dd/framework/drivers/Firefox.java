@@ -19,14 +19,14 @@ public class Firefox implements Browsers {
 
     @Override
     public RemoteWebDriver getWebDriverObject(MutableCapabilities desiredCapabilities) throws MalformedURLException {
-        System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
+        System.setProperty("webdriver.gecko.driver","//src//main/resources//geckodriver");
         startDriverService();
         if (runOnGrid()) {
             return new RemoteWebDriver(new URL(HUB_URL), desiredCapabilities);
         } else {
-            Proxy proxy = new Proxy();
-            proxy.setHttpProxy("localhost:8081");
-            desiredCapabilities.setCapability("proxy", proxy);           	
+            //Proxy proxy = new Proxy();
+           // proxy.setHttpProxy("localhost:8081");
+           // desiredCapabilities.setCapability("proxy", proxy);           	
             return new RemoteWebDriver(firefoxDriverService.getUrl(), desiredCapabilities);
         }
     }
@@ -55,7 +55,7 @@ public class Firefox implements Browsers {
         if (Objects.isNull(firefoxDriverService)) {
             try {
                 firefoxDriverService = new GeckoDriverService.Builder()
-                        .usingDriverExecutable(new File("src/main/resources/geckodriver"))
+                        .usingDriverExecutable(new File("src//main//resources//geckodriver"))
                         .usingAnyFreePort()
                         .build();
                 firefoxDriverService.start();

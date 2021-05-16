@@ -25,9 +25,9 @@ public class Chrome implements Browsers {
     public RemoteWebDriver getWebDriverObject(MutableCapabilities desiredCapabilities) throws MalformedURLException {
     	
     	if(operatingSystem.equalsIgnoreCase("linux"))
-    		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver-64-linux");
+    		System.setProperty("webdriver.chrome.driver","//src//main//resources//chromedriver-64-linux");
     	else
-    		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
+    		System.setProperty("webdriver.chrome.driver","//src//main//resources//chromedriver");
     	
         startDriverService();
         if (runOnGrid()) {
@@ -73,9 +73,9 @@ public class Chrome implements Browsers {
             	
             	String driverPath;
             	if(operatingSystem.equalsIgnoreCase("linux"))
-            		driverPath = "src/main/resources/chromedriver-64-linux";
+            		driverPath = "//src//main//resources//chromedriver-64-linux";
             	else
-            		driverPath = "src/main/resources/chromedriver.exe";
+            		driverPath = "//src//main//resources//chromedriver.exe";
             		
                 chromeDriverService = new ChromeDriverService.Builder()
                         .usingDriverExecutable(new File(driverPath))

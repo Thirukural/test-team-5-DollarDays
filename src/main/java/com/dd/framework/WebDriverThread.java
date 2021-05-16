@@ -28,7 +28,9 @@ public class WebDriverThread {
 
     private Browsers browsers;
 
-    private DriverType defaultDriverType = DriverType.CHROME;
+    //private DriverType defaultDriverType = DriverType.CHROME;
+    private DriverType defaultDriverType = DriverType.FIREFOX;
+    
 
     private final String selectedBrowser = System.getProperty("selectedBrowser", defaultDriverType.toString()).toUpperCase();
     private final String operatingSystem = System.getProperty("os.name");
@@ -65,7 +67,8 @@ public class WebDriverThread {
         logger.info("Current Operating System Version : " + operatingSystemVersion);
         logger.info("Current Architecture : " + systemArchitecture);
         logger.info("Current Browser Selection : " + selectedDriverType);
-
+        
+        System.err.println("selectedDriverType -->"+ selectedDriverType);
         try {
             switch (selectedDriverType) {
                 case CHROME:
