@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- thread-count="8" -->
+
+
+<suite name="Dollar Days">
+	
+	<test name="1st Test" parallel ="true">
+		<classes>
+		
+		 <class name="com.dd.test.Homepage" />
+		 
+		
+			
+			
+		</classes>
+	</test>
+	
+	
+</suite>
