@@ -8,7 +8,7 @@
 	<test name="1st Test" parallel ="true">
 		<classes>
 		
-		 <class name="com.dd.test.Homepage" />
+		 <class name="com.dd.test.HomepageTest" />
 		 
 		
 			

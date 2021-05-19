@@ -28,8 +28,8 @@ public class WebDriverThread {
 
     private Browsers browsers;
 
-    //private DriverType defaultDriverType = DriverType.CHROME;
-    private DriverType defaultDriverType = DriverType.FIREFOX;
+    private DriverType defaultDriverType = DriverType.CHROME;
+    //private DriverType defaultDriverType = DriverType.FIREFOX;
     
 
     private final String selectedBrowser = System.getProperty("selectedBrowser", defaultDriverType.toString()).toUpperCase();

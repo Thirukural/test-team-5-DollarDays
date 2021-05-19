@@ -10,7 +10,7 @@ import com.dd.util.Constants;
 
 //import junit.framework.Assert;
 
-public class Homepage extends WebDriverThread{
+public class HomepageTest extends WebDriverThread{
 //Initializing the drivers	
 	public WebDriver driver;
 	@BeforeMethod

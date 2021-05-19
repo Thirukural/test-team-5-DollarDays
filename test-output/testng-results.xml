@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8547" started-at="2021-05-16T06:13:16Z" finished-at="2021-05-16T06:13:25Z">
+  <suite started-at="2021-05-19T20:28:18Z" name="Dollar Days" finished-at="2021-05-19T20:28:25Z" duration-ms="6472">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8547" started-at="2021-05-16T06:13:16Z" finished-at="2021-05-16T06:13:25Z">
-      <class name="com.dd.test.Homepage">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.dd.test.Homepage@ba54932]" name="initialize" is-config="true" duration-ms="5184" started-at="2021-05-16T06:13:16Z" finished-at="2021-05-16T06:13:21Z">
+    <test started-at="2021-05-19T20:28:18Z" name="1st Test" finished-at="2021-05-19T20:28:25Z" duration-ms="6472">
+      <class name="com.dd.test.HomepageTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:com.dd.test.HomepageTest@363ba634]" started-at="2021-05-19T20:28:18Z" name="initialize" finished-at="2021-05-19T20:28:21Z" duration-ms="2955" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="verifyHomepageURL()[pri:0, instance:com.dd.test.Homepage@ba54932]" name="verifyHomepageURL" duration-ms="2502" started-at="2021-05-16T06:13:21Z" finished-at="2021-05-16T06:13:24Z">
+        <test-method signature="verifyHomepageURL()[pri:0, instance:com.dd.test.HomepageTest@363ba634]" started-at="2021-05-19T20:28:22Z" name="verifyHomepageURL" finished-at="2021-05-19T20:28:25Z" duration-ms="2977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepageURL -->
-        <test-method status="PASS" signature="closeAll()[pri:0, instance:com.dd.test.Homepage@ba54932]" name="closeAll" is-config="true" duration-ms="725" started-at="2021-05-16T06:13:24Z" finished-at="2021-05-16T06:13:25Z">
+        <test-method is-config="true" signature="closeAll()[pri:0, instance:com.dd.test.HomepageTest@363ba634]" started-at="2021-05-19T20:28:25Z" name="closeAll" finished-at="2021-05-19T20:28:25Z" duration-ms="119" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeAll -->
-      </class> <!-- com.dd.test.Homepage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.dd.test.HomepageTest -->
+    </test> <!-- 1st Test -->
+  </suite> <!-- Dollar Days -->
 </testng-results>
