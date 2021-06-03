@@ -4,13 +4,18 @@
 
 
 <suite name="Dollar Days">
+	<listeners>
+		<listener class-name="com.dd.listeners.ListenerBase" />
+		
+	</listeners>
 	
-	<test name="1st Test" parallel ="true">
+	<test name="Homepage Test" parallel ="false">
 		<classes>
-		
-		 <class name="com.dd.test.HomepageTest" />
-		 
-		
+		<!--  this is comment-->
+		 <class name="com.dd.test.SignInPageTest" />
+		 <class name="com.dd.test.HomepageHeaderTest" />
+		 <class name="com.dd.test.HomePageShopByCatTest" />
+		 <class name="com.dd.test.HomepageTest" />  	
 			
 			
 		</classes>

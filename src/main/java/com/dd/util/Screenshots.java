@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +16,7 @@ import org.openqa.selenium.remote.Augmenter;
 import io.qameta.allure.Allure;
 
 public class Screenshots {
-	
+	private static Logger logger = LogManager.getLogger(Screenshots.class.getName());
 	private static boolean createFile(File screenshot) {
 		boolean fileCreated = false;
 		
@@ -45,7 +47,7 @@ public class Screenshots {
 		}
 	}
 
-	private static String save( WebDriver driver) {
+	public static String save( WebDriver driver) {
 		String screenshotAbsolutePath=null;
 		try {
 			String screenshotDirectory = System.getProperty("screenshotDirectory", "target/screenshots");
@@ -57,12 +59,14 @@ public class Screenshots {
 				} catch (ClassCastException weNeedToAugmentOurDriverObject) {
 					writeScreenshotToFile(new Augmenter().augment(driver), screenshot);
 				}
-				System.out.println("Written screenshot to " + screenshotAbsolutePath);
+				logger.info("Written screenshot to " + screenshotAbsolutePath);			
 			} else {
 				System.err.println("Unable to create " + screenshotAbsolutePath);
+				logger.debug("Unable to create" + screenshotAbsolutePath);
 			}
 		} catch (Exception ex) {
 			System.err.println("Unable to capture screenshot...");
+			logger.debug("Unable to capture screenshot...");
 			ex.printStackTrace();
 		}
 		

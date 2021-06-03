@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 
 public class WebDriverThread {
 
-    private static Logger logger = Logger.getLogger(Class.class.getName());
+    public static Logger logger = Logger.getLogger(Class.class.getName());
 
     private RemoteWebDriver webDriver;
     private DriverType selectedDriverType;
@@ -51,7 +51,7 @@ public class WebDriverThread {
         try {
             driverType = DriverType.valueOf(selectedBrowser);
         } catch (IllegalArgumentException ignored) {
-            logger.severe("Unknown driver sepcified, defaulting to '" + driverType + "'...");
+            logger.severe("Unknown driver specified, defaulting to '" + driverType + "'...");
         } catch (NullPointerException ignored) {
             logger.severe("No driver specified, defaulting to '" + driverType + "'...");
         }
