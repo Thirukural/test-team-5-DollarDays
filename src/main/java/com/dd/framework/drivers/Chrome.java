@@ -24,8 +24,11 @@ public class Chrome implements Browsers {
     @Override
     public RemoteWebDriver getWebDriverObject(MutableCapabilities desiredCapabilities) throws MalformedURLException {
     	
-    	if(operatingSystem.equalsIgnoreCase("linux"))
-    		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver-64-linux");
+    //	if(operatingSystem.equalsIgnoreCase("linux"))
+    //		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver-64-linux");
+    	System.out.println("operatingSystem----->"+operatingSystem +"----->Mac OS X");
+    	if(operatingSystem.equalsIgnoreCase("Mac OS X"))
+    		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
     	else
     		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
     	
@@ -72,8 +75,10 @@ public class Chrome implements Browsers {
             try {
             	
             	String driverPath;
-            	if(operatingSystem.equalsIgnoreCase("linux"))
-            		driverPath = "src/main/resources/chromedriver-64-linux";
+            	//if(operatingSystem.equalsIgnoreCase("linux"))
+            		//driverPath = "src/main/resources/chromedriver-64-linux";
+            	if(operatingSystem.equalsIgnoreCase("Mac OS X"))
+            		driverPath = "src/main/resources/chromedriver";
             	else
             		driverPath = "src/main/resources/chromedriver.exe";
             		
