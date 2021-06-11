@@ -32,6 +32,7 @@ public class Chrome implements Browsers {
     	else if (operatingSystem.equalsIgnoreCase("Linux")) {
     		System.out.println("Executing in Linux OS .......");
     		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
+    		System.out.println("System property is set");
     	}
     	else
     		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
