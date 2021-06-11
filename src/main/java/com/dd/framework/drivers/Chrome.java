@@ -28,10 +28,10 @@ public class Chrome implements Browsers {
     //		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver-64-linux");
     	System.out.println("operatingSystem----->"+operatingSystem);
     	if(operatingSystem.equalsIgnoreCase("Mac OS X"))
-    		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
+    		System.setProperty("webdriver.chrome.driver","src//main//resources//chromedriver");
     	else if (operatingSystem.equalsIgnoreCase("Linux")) {
     		System.out.println("Executing in Linux OS .......");
-    		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
+    		System.setProperty("webdriver.chrome.driver","src//main//resources//chromedriver");
     		System.out.println("System property is set");
     	}
     	else
@@ -84,15 +84,16 @@ public class Chrome implements Browsers {
             	//if(operatingSystem.equalsIgnoreCase("linux"))
             		//driverPath = "src/main/resources/chromedriver-64-linux";
             	if(operatingSystem.equalsIgnoreCase("Mac OS X"))
-            		driverPath = "src/main/resources/chromedriver";
+            		driverPath = "src//main//resources//chromedriver";
             	else if(operatingSystem.equalsIgnoreCase("Linux")){
             		System.out.println("before 2222");
-            		driverPath = "src/main/resources/chromedriver";  
+            		driverPath = "src//main//resources//chromedriver";  
             		System.out.println("after set driver path--->"+driverPath);
             	}
             	else
             		driverPath = "src/main/resources/chromedriver.exe";
             	System.out.println("3333");
+            	System.out.println("after 3333 set driver path--->"+driverPath);
                 chromeDriverService = new ChromeDriverService.Builder()
                         .usingDriverExecutable(new File(driverPath))
                         .usingAnyFreePort()
