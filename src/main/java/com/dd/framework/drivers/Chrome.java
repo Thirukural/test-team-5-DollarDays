@@ -94,8 +94,9 @@ public class Chrome implements Browsers {
             		driverPath = "src/main/resources/chromedriver.exe";
             	System.out.println("3333");
             	System.out.println("after 3333 set driver path--->"+driverPath);
+            	System.out.println("Path : " + System.getProperty("webdriver.chrome.driver"));
                 chromeDriverService = new ChromeDriverService.Builder()
-                        .usingDriverExecutable(new File(driverPath))
+                        .usingDriverExecutable(new File(System.getProperty("webdriver.chrome.driver")))
                         .usingAnyFreePort()
                         .build();
                 System.out.println("4444");
