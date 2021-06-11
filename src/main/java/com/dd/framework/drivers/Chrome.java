@@ -80,21 +80,26 @@ public class Chrome implements Browsers {
             try {
             	
             	String driverPath;
+            	System.out.println("111111");
             	//if(operatingSystem.equalsIgnoreCase("linux"))
             		//driverPath = "src/main/resources/chromedriver-64-linux";
             	if(operatingSystem.equalsIgnoreCase("Mac OS X"))
             		driverPath = "src/main/resources/chromedriver";
             	else if(operatingSystem.equalsIgnoreCase("Linux")){
-            		driverPath = "src/main/resources/chromedriver";      
+            		System.out.println("before 2222");
+            		driverPath = "src/main/resources/chromedriver";  
+            		System.out.println("after set driver path--->"+driverPath);
             	}
             	else
             		driverPath = "src/main/resources/chromedriver.exe";
-            		
+            	System.out.println("3333");
                 chromeDriverService = new ChromeDriverService.Builder()
                         .usingDriverExecutable(new File(driverPath))
                         .usingAnyFreePort()
                         .build();
+                System.out.println("4444");
                 chromeDriverService.start();
+                System.out.println("5555");
             } catch (IOException e) {
                 e.printStackTrace();
             }
