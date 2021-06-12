@@ -28,7 +28,7 @@ public class Chrome implements Browsers {
     //		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver-64-linux");
     	System.out.println("operatingSystem----->"+operatingSystem);
     	if(operatingSystem.equalsIgnoreCase("Mac OS X"))
-    		System.setProperty("webdriver.chrome.driver","src//main//resources//chromedriver");
+    		System.setProperty("webdriver.chrome.driver","src//main//resources//chromedriver-64-mac");
     	else if (operatingSystem.equalsIgnoreCase("Linux")) {
     		System.out.println("Executing in Linux OS .......");
     		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver-64-linux");
@@ -84,7 +84,7 @@ public class Chrome implements Browsers {
             	//if(operatingSystem.equalsIgnoreCase("linux"))
             		//driverPath = "src/main/resources/chromedriver-64-linux";
             	if(operatingSystem.equalsIgnoreCase("Mac OS X"))
-            		driverPath = "src//main//resources//chromedriver";
+            		driverPath = "src//main//resources//chromedriver-64-mac";
             	else if(operatingSystem.equalsIgnoreCase("Linux")){
             		System.out.println("before 2222");
             		driverPath = "src/main/resources/chromedriver-64-linux";  
